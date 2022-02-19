@@ -1,0 +1,58 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: BoundedContext115
+          uri: http://localhost:8081
+          predicates:
+            - Path=/orders/** 
+        - id: BoundedContext57.499961853027344
+          uri: http://localhost:8082
+          predicates:
+            - Path=/deliveries/**/inventories/** 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: BoundedContext115
+          uri: http://BoundedContext115:8080
+          predicates:
+            - Path=/orders/** 
+        - id: BoundedContext57.499961853027344
+          uri: http://BoundedContext57.499961853027344:8080
+          predicates:
+            - Path=/deliveries/**/inventories/** 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080

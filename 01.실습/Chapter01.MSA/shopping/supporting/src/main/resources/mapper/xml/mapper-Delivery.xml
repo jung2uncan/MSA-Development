@@ -1,0 +1,36 @@
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shopping.mapper.DeliveryMapper">
+    <select id="findList" resultType="delivery">
+        SELECT 
+            id
+        FROM delivery
+    </select>
+    
+    
+    <select id="findOneById" parameterType="long" resultType="delivery">
+        SELECT 
+            id
+        FROM delivery
+        WHERE id = #{id}
+    </select>
+    
+    <insert id="save" parameterType="delivery" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO delivery (
+            ) 
+        VALUES (
+            )
+    </insert>
+    
+    <update id="update" parameterType="delivery">
+        UPDATE reservation
+        SET 
+        WHERE id = #{id}
+    </update>
+    
+    <delete id = "deleteById" parameterType="long">
+        DELETE FROM delivery WHERE id = #{id}
+    </delete>
+</mapper>
