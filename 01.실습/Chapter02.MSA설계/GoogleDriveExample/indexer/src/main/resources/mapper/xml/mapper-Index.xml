@@ -1,0 +1,44 @@
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="googledriveexample.mapper.IndexMapper">
+    <select id="findList" resultType="index">
+        SELECT 
+            id,
+
+            fileId
+        FROM index
+    </select>
+    
+    
+    <select id="findOneById" parameterType="long" resultType="index">
+        SELECT 
+            id,
+
+            fileId
+        FROM index
+        WHERE id = #{id}
+    </select>
+    
+    <insert id="save" parameterType="index" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO index (
+                        fileId
+            ) 
+        VALUES (
+                        #{ fileId }
+            )
+    </insert>
+    
+    <update id="update" parameterType="index">
+        UPDATE reservation
+        SET 
+
+            fileId = #{ fileId }
+        WHERE id = #{id}
+    </update>
+    
+    <delete id = "deleteById" parameterType="long">
+        DELETE FROM index WHERE id = #{id}
+    </delete>
+</mapper>

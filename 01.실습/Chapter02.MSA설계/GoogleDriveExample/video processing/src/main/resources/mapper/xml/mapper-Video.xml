@@ -1,0 +1,52 @@
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="googledriveexample.mapper.VideoMapper">
+    <select id="findList" resultType="video">
+        SELECT 
+            id,
+
+            fileId,
+
+            videoUrl
+        FROM video
+    </select>
+    
+    
+    <select id="findOneById" parameterType="long" resultType="video">
+        SELECT 
+            id,
+
+            fileId,
+
+            videoUrl
+        FROM video
+        WHERE id = #{id}
+    </select>
+    
+    <insert id="save" parameterType="video" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO video (
+                        fileId,
+                        videoUrl
+            ) 
+        VALUES (
+                        #{ fileId },
+                        #{ videoUrl }
+            )
+    </insert>
+    
+    <update id="update" parameterType="video">
+        UPDATE reservation
+        SET 
+
+            fileId = #{ fileId },
+
+            videoUrl = #{ videoUrl }
+        WHERE id = #{id}
+    </update>
+    
+    <delete id = "deleteById" parameterType="long">
+        DELETE FROM video WHERE id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,82 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: dashboard
+          uri: http://localhost:8081
+          predicates:
+            - Path= /dashboards/**
+        - id: drive
+          uri: http://localhost:8082
+          predicates:
+            - Path=/files/**,/File/** 
+        - id: indexer
+          uri: http://localhost:8083
+          predicates:
+            - Path=/indices/**,/Index/** 
+        - id: video processing
+          uri: http://localhost:8084
+          predicates:
+            - Path=/videos/**,/Video/** 
+        - id: notification
+          uri: http://localhost:8085
+          predicates:
+            - Path=/notifications/**,/Notification/** 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: dashboard
+          uri: http://dashboard:8080
+          predicates:
+            - Path= /dashboards/**
+        - id: drive
+          uri: http://drive:8080
+          predicates:
+            - Path=/files/**,/File/** 
+        - id: indexer
+          uri: http://indexer:8080
+          predicates:
+            - Path=/indices/**,/Index/** 
+        - id: video processing
+          uri: http://video processing:8080
+          predicates:
+            - Path=/videos/**,/Video/** 
+        - id: notification
+          uri: http://notification:8080
+          predicates:
+            - Path=/notifications/**,/Notification/** 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
