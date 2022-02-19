@@ -1,0 +1,19 @@
+* 개발 실습 개요
+
+- 개발 대상:  온라인 커머스 서비스 
+- 개발 서비스 품질 목표:  Resiliency, Scalability, Responsiveness
+- 조직의 전환:  Horizontal to Vertical, Matrix Organization
+
+
+* 마이크로서비스의 분석과 설계
+- DDD와 MSA Design Patterns을 적용한 마이크로서비스 구현 전략, Cloud Native Application 의 특성과 구현원칙들
+- 서비스 식별과 분해방법들 – Core Domain 과 Supporting Domain, Bounded Context, Aggregate, Business Capability, Mini Service
+- 분해된 서비스의 연동 방법 – Context Mapping, Request/Response or Event-driven MSA
+- Outer Architecture 구성요소 – API GW, 분산큐(Kafka), 서비스 레지스트리, 로드밸런서, 서킷브레이커, 사이드카 패턴 등 
+
+
+* 단위 마이크로서비스의 구현
+- DDD 와 이벤트 스토밍의 결과를 헥사고날 아키텍처로 매핑하는 방법
+- Spring Boot와 Maven 을 이용한 단위 서비스 포장
+- JPA 를 이용한 도메인 모델과 어댑터 구현 (Entity, Value Objects)
+- Spring Data REST + JPA 를 통한 RESTful API 노출 (HATEOAS)
