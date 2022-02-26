@@ -1,0 +1,7 @@
+* 프론트엔드를 통한 마이크로 서비스 통합
+
+UI 를 기반한 서비스 통합 전략:  Client-side Rendering, SPA, MVVM, HATEOAS
+MVVM Front-end 프레임워크:  VueJS, React, Angular2
+API Gateway 를 통한 진입점 단일화, 전급 관리 및 인증 통합
+OAuth2 와 JWT 통한 Stateless 한 토큰 기반 접근과  인증
+Front-end 기반 통합의 한계: 트랜잭션 이슈와 성능 문제
