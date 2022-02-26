@@ -1,0 +1,8 @@
+/home/project/cna-start/order/src/main/java/shopmall/OrderRepository.java
+/home/project/cna-start/order/src/main/java/shopmall/Order.java
+/home/project/cna-start/order/src/main/java/shopmall/OrderPlaced.java
+/home/project/cna-start/order/src/main/java/shopmall/config/kafka/KafkaProcessor.java
+/home/project/cna-start/order/src/main/java/shopmall/OrderApplication.java
+/home/project/cna-start/order/src/main/java/shopmall/OrderController.java
+/home/project/cna-start/order/src/main/java/shopmall/AbstractEvent.java
+/home/project/cna-start/order/src/main/java/shopmall/PolicyHandler.java
