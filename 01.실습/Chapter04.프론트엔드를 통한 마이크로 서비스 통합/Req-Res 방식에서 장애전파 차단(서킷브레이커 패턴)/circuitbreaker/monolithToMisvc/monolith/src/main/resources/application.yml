@@ -1,0 +1,42 @@
+server:
+  port: 8088
+
+spring:
+  profiles: default
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+
+logging:
+  level:
+    org.hibernate.type: trace
+    org.springframework.cloud: debug
+
+
+api:
+  url:
+    delivery: http://localhost:8082
+
+feign:
+ hystrix:
+   enabled: true
+
+#서비스로의 요청 실패가 임계치를 넘으면 대신 응답할 FallBackFactory 클래스를 설정할 수 있음
+hystrix:
+ command:
+   # 전역설정
+   default:
+     execution.isolation.thread.timeoutInMilliseconds: 610   #610ms 초과하는 요청은 실패 처리
+
+
+
+# 교육용 코드
+superuser:
+  userId: ${_SUPER_UID:admin123}
