@@ -66,7 +66,7 @@ public class Order {
     /**
      * 주문이 들어옴
      */
-    @PostPersist
+    @PostPersist //해당 엔티티를 저장한 이후 이 메소드를 실행한다는 의미
     private void callDeliveryStart(){
 
         Delivery delivery = new Delivery();
