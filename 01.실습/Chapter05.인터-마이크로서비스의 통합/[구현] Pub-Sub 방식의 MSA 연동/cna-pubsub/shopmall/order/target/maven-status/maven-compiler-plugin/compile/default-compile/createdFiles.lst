@@ -1,0 +1,9 @@
+shopmall/OrderApplication.class
+shopmall/AbstractEvent$1.class
+shopmall/OrderController.class
+shopmall/Order.class
+shopmall/PolicyHandler.class
+shopmall/OrderRepository.class
+shopmall/OrderPlaced.class
+shopmall/AbstractEvent.class
+shopmall/config/kafka/KafkaProcessor.class
