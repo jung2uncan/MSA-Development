@@ -1,0 +1,11 @@
+Kafka Connect 용어 정의
+    - Connect: Connector를 동작하게 하는 프로세서(서버)
+    - Connector: Data Source(DB)의 데이터를 처리하는 소스가 들어있는 jar파일
+    - Source Connector: data source에 담긴 데이터를 topic에 담는 역할(Producer)을 하는 connector
+    - Sink Connector: topic에 담긴 데이터를 특정 data source로 보내는 역할(Consumer 역할)을 하는 connector
+    - Dead Letter Queue ‒ Connect에서 Connector 오류를 처리하는 방법
+
+
+    - 단일 모드(Standalone): 하나의 Connect만 사용하는 모드
+    - 분산 모드(Distributed): 여러개의 Connect를 한 클러스트로 묶어서 사용하는 모드
+    - 특정 Connect가 장애가 발생해도 나머지 Connect가 대신 처리하도록 함
