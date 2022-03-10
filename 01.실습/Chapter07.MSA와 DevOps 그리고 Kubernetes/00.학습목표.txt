@@ -1,0 +1,14 @@
+1) MSA와 DevOps 그리고 Kubernetes
+    - 마이크로서비스와 DevOps의 적용사례 – 아마존과 넷플릭스
+    - 컨테이너와 컨테이너 오케스트레이터의 등장
+    - 컨테이너 기반 애플리케이션 디자인 패턴
+    - 구글의 Kubernetes를 기반한 MSA와 DevOps 환경의 적용 시나리오
+
+
+2) Kubernetes 의 구조, 활용 시나리오의 전반적 이해
+    - Kubernetes 등장 배경 (Borg), Features, Architecture 
+    - Kubernetes Runtime Mechanism
+    - Kubernetes Object Model 과 Declarative Configuration 개념
+    - Kubernetes 의 설치:  Configuration, Infrastructure, Localhost vs On-premise vs Cloud Installation, Tools/Resources
+    - Public Kubernetes 서비스 (GCP / AWS / Azure) 계정 생성과 접속
+    - 샘플 MSA 애플리케이션의 디플로이 전과정 미리보기
