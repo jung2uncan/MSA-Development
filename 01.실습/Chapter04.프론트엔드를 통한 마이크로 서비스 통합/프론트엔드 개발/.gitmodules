@@ -1,3 +1,0 @@
-[submodule "01.실습/Chapter04.프론트엔드를 통한 마이크로 서비스 통합/monolith"]
-	path = 01.실습/Chapter04.프론트엔드를 통한 마이크로 서비스 통합/monolith
-	url = https://github.com/event-storming/monolith.git
