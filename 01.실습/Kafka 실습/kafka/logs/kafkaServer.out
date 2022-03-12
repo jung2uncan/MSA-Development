@@ -1,1 +1,0 @@
-[2022-03-10 00:35:07,144] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
