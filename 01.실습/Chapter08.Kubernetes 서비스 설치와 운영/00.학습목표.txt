@@ -1,0 +1,9 @@
+* Kubernetes 서비스 설치와 운영 
+    • Kubernetes 기본 명령과 Kubectl 를 통한 객체 다루기
+    • Kubernetes 를 통한 애플리케이션 디플로이, 인터넷으로의 서비스 노출과정
+    • Azure VM 서비스에서의 Node 확인과 pod 디플로이 전략 확인
+    • Pod, Deployment, ReplicaSet, StatefulSet, DaemonSet 등 객체 세부
+    • Self healing, Auto Scaling, Zero-Down time Deployment
+    • Liveness & Readiness 의 설정, 트러블슈팅 방법
+    • Volume, PersistenceVolume, PersistenceVolumeClaim
+    • Yaml, Helm 를 이용한 멀티 티어 애플리케이션 프로비져닝
