@@ -1,0 +1,11 @@
+ 쿠버네티스를 이용한 Micro Services and DevOps
+ 
+ MSA Application 서비스 시나리오: 샘플 애플리케이션
+• 애플리케이션 패키징을 위한 컨테이너 (도커)의 이해
+• 마이크로 서비스 섀시 (Chassis) : 스프링 클라우드와 넷플릭스 OSS, 그리고 도커를 통한 서비스 패키징
+• Container Registry 를 이용한 도커 레지스트리에 서비스 퍼블리싱
+• 애플리케이션 디플로이먼트 디스크립터의 설정, Liveness & Readiness 설정
+• 서비스 매시 Isio의 개념과 쿠버네티스와 관계 이해
+• Istio 를 통한 Resilience 향상: 서킷 브레이킹, 레이트 리미팅, 리트라이, 풀이젝션
+• Istio 를 통한 Smart Deploy: 동적 트래픽 라우팅, AB Testing, 카나리 디플로이, 새도우 디플로이
+• Istio 를 통한 모니터링: 프로메테우스를 통한 모니터링 수집, 예거, 키알리를 통한 분산 서비스 추적 프로파일링
