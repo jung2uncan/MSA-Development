@@ -10,4 +10,4 @@ spec:
   resources:
     requests:
       storage: 1Mi
-  storageClassName: aws-efs
+  storageClassName: aws-efs 
