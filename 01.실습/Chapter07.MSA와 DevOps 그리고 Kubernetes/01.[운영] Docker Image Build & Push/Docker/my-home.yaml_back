@@ -1,0 +1,21 @@
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata: 
+  name: "my-home2"
+  labels: 
+    app: "my-home2"
+spec: 
+  selector: 
+    matchLabels: 
+      app: "my-home2"
+  replicas: 1
+  template: 
+    metadata: 
+      labels: 
+        app: "my-home2"
+    spec: 
+      containers: 
+        - name: "my-home2"
+          image: "jung2uncan/my-nginx:v1"
+          ports: 
+            - containerPort: 80
