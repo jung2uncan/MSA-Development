@@ -1,0 +1,29 @@
+kubectl apply -f - <<EOF
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: delivery
+    namespace: tutorial
+    labels:
+      app: delivery
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: delivery
+    template:
+      metadata:
+        labels:
+          app: delivery
+      spec:
+        containers:
+          - name: delivery
+            image: 979050235289.dkr.ecr.ap-northeast-2.amazonaws.com/delivery
+            ports:
+              - containerPort: 8080
+            resources:
+              limits:
+                cpu: 500m
+              requests:
+                cpu: 200m
+EOF

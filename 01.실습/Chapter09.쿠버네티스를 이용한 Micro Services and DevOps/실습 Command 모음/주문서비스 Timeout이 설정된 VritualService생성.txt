@@ -1,0 +1,15 @@
+kubectl apply -f - <<EOF
+    apiVersion: networking.istio.io/v1alpha3
+    kind: VirtualService
+    metadata:
+      name: vs-order-network-rule
+      namespace: tutorial
+    spec:
+      hosts:
+      - order
+      http:
+      - route:
+        - destination:
+            host: order
+        timeout: 3s
+EOF
