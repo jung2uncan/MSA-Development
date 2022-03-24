@@ -1,0 +1,11 @@
+DevOps with CI/CD
+퍼블릭 클라우드 환경의 DevOps 환경중 CI/CD 를 기반으로 빌드하고 분석하고 배포(deployment)하는 방법을 학습한다.
+
+CI/CD 프로세스와 AWS 의 대응 서비스
+• CI (Continuous Integration) / CD (Continuous Delivery) 개요
+• CI/CD Pipeline 구성요소 – Source Repository, Builder, Pipeline, Image Registry, Container Orchestrator
+• AWS 의 대응 서비스 – AWS Repos Git, AWS Pipeline and AWS Container Registry, 그리고 AWS Kubernetes Service
+
+CI/CD Pipeline with AWS Pipelines
+• Maven 개념과 라이브러리 디펜던시 (pom.xml) 의 구조 이해
+• 소스코드의 변경을 통한 Git 트리거를 통한 파이프라인 실행
