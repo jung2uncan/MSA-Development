@@ -1,4 +1,4 @@
-DevOps with CI/CD
+* DevOps with CI/CD
 퍼블릭 클라우드 환경의 DevOps 환경중 CI/CD 를 기반으로 빌드하고 분석하고 배포(deployment)하는 방법을 학습한다.
 
 CI/CD 프로세스와 AWS 의 대응 서비스
